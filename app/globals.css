@@ -118,7 +118,7 @@
 @layer base {
   * {
     border-color: var(--border);
-    outline: 1px solid var(--ring);
+    /* outline: 1px solid var(--ring); */
   }
   body {
     background: var(--background);

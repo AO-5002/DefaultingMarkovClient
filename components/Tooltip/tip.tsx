@@ -10,13 +10,14 @@ import { Children } from "@/util/types/Children";
 type Additional = {
   text?: string;
   redirection?: string;
+  onClick?: () => void;
 };
 
-export function TooltipBtn({ children, text }: Children & Additional) {
+export function TooltipBtn({ children, text, onClick }: Children & Additional) {
   return (
     <Tooltip>
       <TooltipTrigger asChild>
-        <Button className="outline" size={"icon"}>
+        <Button className="outline" size={"icon"} onClick={onClick}>
           {children}
         </Button>
       </TooltipTrigger>
