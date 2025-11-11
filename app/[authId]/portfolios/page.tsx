@@ -8,7 +8,7 @@ function page() {
     <PageLayout>
       <GridContents>
         <div className="w-full h-full row-start-1 rounded"></div>
-        <div className="w-full h-full row-start-2 rounded bg-green-50">
+        <div className="w-full h-full row-start-2 rounded border border-zinc-200 overflow-hidden">
           <ScrollItems />
         </div>
       </GridContents>
