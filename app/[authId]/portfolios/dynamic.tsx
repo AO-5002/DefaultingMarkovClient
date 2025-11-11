@@ -48,7 +48,7 @@ function DeliquantBox() {
 
 function ExpectedLossChart() {
   return (
-    <div className="col-start-1 row-start-2 col-span-8 w-full h-full rounded-xl">
+    <div className="col-start-1 row-start-2 col-span-8 w-full h-full rounded-xl overflow-hidden">
       <ChartLineDefault />
     </div>
   );
