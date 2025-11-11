@@ -7,7 +7,7 @@ function page() {
   return (
     <PageLayout>
       <GridContents>
-        <div className="w-full h-full row-start-1 rounded"></div>
+        <div className="w-full h-full row-start-1 rounded border border-zinc-200"></div>
         <div className="w-full h-full row-start-2 rounded border border-zinc-200 overflow-hidden">
           <ScrollItems />
         </div>
