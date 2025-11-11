@@ -8,9 +8,14 @@ function Nav({ items }: INavBar) {
   const { user } = UserAuth();
   return (
     <>
-      <nav className="w-full h-8 flex flex-row items-center justify-between border-b border-zinc-200">
+      <nav className="w-full h-8 flex flex-row-reverse items-center border-b border-zinc-200 gap-4">
         {user ? (
           <>
+            <TooltipBtn text={user.displayName}>
+              <div className="rounded-full">
+                <img src={user.photoURL} />
+              </div>
+            </TooltipBtn>
             {items.map((item, i) => (
               <TooltipBtn key={i} text={item.title}>
                 {item.icon}

@@ -1,11 +1,15 @@
-import React from "react";
+"use client";
 import { NavItem } from "./static";
-import { User } from "lucide-react";
+import { BriefcaseBusiness, ChartColumn } from "lucide-react";
 
 const items: NavItem[] = [
   {
-    title: "Balls",
-    icon: <User width={24} height={24} />,
+    title: "Portfolio Log",
+    icon: <BriefcaseBusiness size={24} />,
+  },
+  {
+    title: "General Analytics",
+    icon: <ChartColumn size={24} />,
   },
 ];
 

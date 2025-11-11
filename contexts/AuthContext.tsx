@@ -39,7 +39,7 @@ export const AuthContextProvider = ({ children }: ChildrenProps) => {
     });
 
     return () => unsub();
-  }, [user]);
+  }, []); // ❌ Remove [user] from here - should be empty []
 
   return (
     <AuthContext.Provider value={{ user, googleSignIn, logOut }}>
