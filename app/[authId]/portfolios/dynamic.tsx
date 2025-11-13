@@ -54,6 +54,12 @@ function ExpectedLossChart() {
   );
 }
 
+function HealthPortfolio() {
+  return (
+    <div className="col-start-7 row-start-1 col-span-2 border border-zinc-500 w-full h-full rounded-xl"></div>
+  );
+}
+
 function ItemContent({ heading, description }: ItemContentProps) {
   return (
     <>
@@ -61,7 +67,7 @@ function ItemContent({ heading, description }: ItemContentProps) {
       <div className="w-full h-full grid grid-cols-8 grid-rows-[125px_1fr] mt-8 gap-4">
         <EADBox />
         <DeliquantBox />
-        <div className="col-start-7 row-start-1 col-span-2 bg-blue-100  w-full h-full rounded-xl"></div>
+        <HealthPortfolio />
         <ExpectedLossChart />
       </div>
     </>
@@ -70,7 +76,7 @@ function ItemContent({ heading, description }: ItemContentProps) {
 
 function ScrollItems() {
   return (
-    <ScrollStack>
+    <ScrollStack stackPosition="10%">
       <ScrollStackItem itemClassName="bg-zinc-900 text-white flex flex-col gap-4">
         <ItemContent heading="Portfolio" />
       </ScrollStackItem>
@@ -78,7 +84,7 @@ function ScrollItems() {
         <ItemContent heading="BoA" />
       </ScrollStackItem>
       <ScrollStackItem itemClassName="bg-zinc-900 text-white flex flex-col gap-4">
-        <ItemContent heading="Portfolio" />
+        <ItemContent heading="Chase" />
       </ScrollStackItem>
     </ScrollStack>
   );

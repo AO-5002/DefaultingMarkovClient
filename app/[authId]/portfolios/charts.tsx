@@ -39,12 +39,15 @@ const chartConfig = {
 export function ChartLineDefault() {
   return (
     <Card className="h-full flex flex-col overflow-hidden">
-      <CardHeader>
-        <CardTitle>Line Chart</CardTitle>
+      <CardHeader className="shrink-0">
+        <CardTitle>Expected Loss</CardTitle>
         <CardDescription>January - June 2024</CardDescription>
       </CardHeader>
-      <CardContent className="flex-1 min-h-0 overflow-hidden">
-        <ChartContainer config={chartConfig} className="h-full w-full">
+      <CardContent className="flex-1 min-h-0 overflow-hidden p-4">
+        <ChartContainer
+          config={chartConfig}
+          className="h-full w-full !aspect-auto"
+        >
           <LineChart
             accessibilityLayer
             data={chartData}
@@ -52,7 +55,7 @@ export function ChartLineDefault() {
               left: 12,
               right: 12,
               top: 12,
-              bottom: 5,
+              bottom: 0,
             }}
           >
             <CartesianGrid vertical={false} />
@@ -60,8 +63,8 @@ export function ChartLineDefault() {
               dataKey="month"
               tickLine={false}
               axisLine={false}
-              tickMargin={4}
-              height={40}
+              tickMargin={8}
+              height={30}
               tickFormatter={(value) => value.slice(0, 3)}
             />
             <ChartTooltip
