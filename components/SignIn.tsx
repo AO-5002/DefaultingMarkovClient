@@ -4,8 +4,12 @@ import { UserRound } from "lucide-react";
 import { UserAuth } from "@/contexts/AuthContext";
 import { toast } from "sonner";
 
-function SignIn() {
-  const { googleSignIn } = UserAuth(); // ✅ Move inside component
+interface SignInProps {
+  variant?: "light" | "dark";
+}
+
+function SignIn({ variant = "light" }: SignInProps) {
+  const { googleSignIn } = UserAuth();
 
   const handleSignIn = async () => {
     try {
@@ -16,7 +20,7 @@ function SignIn() {
   };
 
   return (
-    <TooltipBtn text={"Sign In"} onClick={handleSignIn}>
+    <TooltipBtn text={"Sign In"} onClick={handleSignIn} variant={variant}>
       <UserRound />
     </TooltipBtn>
   );
