@@ -1,16 +1,7 @@
 "use client";
-import {
-  Ellipsis,
-  Import,
-  Plus,
-  Minus,
-  ChevronDown,
-  Clock,
-  Check,
-  ChevronLeft,
-  Weight,
-} from "lucide-react";
+import { Import, Plus, Clock, Check, ChevronLeft, Weight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 import {
   Table,
   TableBody,
@@ -23,9 +14,10 @@ import {
 import { Input } from "@/components/ui/input";
 
 function BackBtn() {
+  const router = useRouter();
   return (
     <div className="w-full h-8 flex-row justify-between">
-      <Button className="bg-black text-white">
+      <Button className="bg-black text-white" onClick={() => router.back()}>
         <ChevronLeft size={48} />
       </Button>
     </div>

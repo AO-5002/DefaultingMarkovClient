@@ -4,7 +4,7 @@ import { LearnMoreBtn } from "./dynamic";
 
 function TextDescription({ children }: Children) {
   return (
-    <div className="w-xl">
+    <div className="w-xl text-left">
       <p className="text-zinc-400 font-md text-sm">{children}</p>
     </div>
   );
@@ -16,7 +16,7 @@ function Heading({ children }: Children) {
 
 function Hero() {
   return (
-    <div className=" w-full h-full flex justify-center items-start px-20 py-12 gap-12">
+    <div className=" w-full h-full flex justify-center items-start py-12 gap-12 text-white">
       <div className="w-full flex flex-col justify-start gap-8">
         <div className="w-full flex flex-col justify-start">
           <Heading>

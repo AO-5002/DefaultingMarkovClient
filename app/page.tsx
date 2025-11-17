@@ -1,11 +1,11 @@
 import SignOut from "@/components/SignOut";
 import PageLayout from "@/layouts/PageLayout";
-import { Hero } from "./static";
+import { HeroLayout } from "@/layouts/HeroLayout";
 
 export default function Home() {
   return (
-    <PageLayout>
-      <Hero />
-    </PageLayout>
+    <HeroLayout>
+      <h1>hi</h1>
+    </HeroLayout>
   );
 }
