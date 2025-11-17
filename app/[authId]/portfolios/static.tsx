@@ -16,4 +16,12 @@ function GridContents({ children }: Children) {
   );
 }
 
-export { GridContents, TopRow };
+function IconBox({ children }: Children) {
+  return (
+    <div className="bg-zinc-800 p-4 flex w-[100px] h-[100px] rounded-xl justify-center items-center">
+      {children}
+    </div>
+  );
+}
+
+export { GridContents, TopRow, IconBox };

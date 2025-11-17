@@ -1,19 +1,12 @@
 import ScrollStack, { ScrollStackItem } from "@/components/ScrollStack";
 import { Children } from "@/util/types/Children";
-import { DollarSign, TrendingDown, Icon } from "lucide-react";
+import { DollarSign, TrendingDown, TrendingUp, Icon } from "lucide-react";
 import { ChartLineDefault } from "./charts";
+import { IconBox } from "./static";
 
 interface ItemContentProps {
   heading: string;
   description?: string;
-}
-
-function IconBox({ children }: Children) {
-  return (
-    <div className="bg-zinc-800 p-4 flex w-[100px] h-[100px] rounded-xl justify-center items-center">
-      {children}
-    </div>
-  );
 }
 
 function EADBox() {
@@ -56,7 +49,13 @@ function ExpectedLossChart() {
 
 function HealthPortfolio() {
   return (
-    <div className="col-start-7 row-start-1 col-span-2 border border-zinc-500 w-full h-full rounded-xl"></div>
+    <div className="col-start-7 row-start-1 col-span-2 border border-zinc-500 w-full h-full rounded-xl p-4 flex flex-col justify-between items-center">
+      <span className="text-base font-medium text-zinc-200">Health Score</span>
+      <div className="flex items-center gap-2">
+        <h1 className="text-5xl font-bold text-green-400">B+</h1>
+        <TrendingUp size={24} className="text-green-400" />
+      </div>
+    </div>
   );
 }
 

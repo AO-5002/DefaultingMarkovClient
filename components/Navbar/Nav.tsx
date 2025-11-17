@@ -10,7 +10,7 @@ function Nav({ items }: INavBar) {
   const { user } = UserAuth();
   return (
     <>
-      <nav className="w-full h-10 border-b border-zinc-200 flex justify-between items-center gap-4 p-2">
+      <nav className="w-full h-10 border-b border-zinc-200 flex justify-between items-center gap-4 py-2">
         <LogoImg />
         {user ? (
           <>

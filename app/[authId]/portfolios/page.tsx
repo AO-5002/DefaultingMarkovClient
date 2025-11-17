@@ -2,7 +2,7 @@ import React from "react";
 import PageLayout from "@/layouts/PageLayout";
 import { GridContents, TopRow } from "./static";
 import { ScrollItems } from "./dynamic";
-import { PortfolioCount, FunctionBar } from "./top-row";
+import { PortfolioCount, FunctionBar, TotalPortfolioValue } from "./top-row";
 
 function page() {
   return (
@@ -11,7 +11,7 @@ function page() {
         <div className="w-full h-full row-start-1 rounded-lg ">
           <TopRow>
             <PortfolioCount />
-            <div className="col-start-3 w-full h-full bg-red-50 "></div>
+            <TotalPortfolioValue />
             <FunctionBar />
           </TopRow>
         </div>
